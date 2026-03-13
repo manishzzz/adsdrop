@@ -1,0 +1,4 @@
+﻿src/app/deals/page.tsx(139,14): error TS2304: Cannot find name 'Link'.
+src/app/deals/page.tsx(144,15): error TS2304: Cannot find name 'Link'.
+src/app/deals/page.tsx(145,14): error TS2304: Cannot find name 'Link'.
+src/app/deals/page.tsx(150,15): error TS2304: Cannot find name 'Link'.

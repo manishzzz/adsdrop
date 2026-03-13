@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --primary: #005B99;
+  --accent: #FF6B2B;
+  --hero-bg: #1A1A2E;
+}
+
+@layer base {
+  body {
+    @apply antialiased text-[#171717] bg-white selection:bg-[#005B99]/20;
+  }
+}
+
+@layer components {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+.glass {
+  @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-xl;
+}
+
+.btn-primary {
+  @apply bg-[#005B99] text-white px-8 py-3 rounded-full font-bold hover:bg-[#004a7c] transition-all active:scale-95 shadow-lg hover:shadow-xl;
+}
+
+.btn-secondary {
+  @apply bg-white text-[#005B99] border-2 border-[#005B99] px-8 py-3 rounded-full font-bold hover:bg-gray-50 transition-all active:scale-95;
+}
+
+.btn-accent {
+  @apply bg-[#FF6B2B] text-white px-8 py-3 rounded-full font-bold hover:bg-[#e65a1b] transition-all active:scale-95 shadow-orange-500/20 shadow-lg hover:shadow-xl;
+}
+
+@keyframes pulse-red {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
+
+.animate-pulse-red {
+  animation: pulse-red 2s infinite;
+}
